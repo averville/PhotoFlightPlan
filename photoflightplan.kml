@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+<name>flightplan.kml</name>
+<StyleMap id="kildirtech">
+</StyleMap>
+<Style id="flightplan1">
+<LineStyle>
+<color>ffff00ff</color>
+<width>3</width>
+</LineStyle>
+</Style>
+<Style id="flightplan2">
+<LineStyle>
+<color>ffff0000</color>
+<width>5</width>
+</LineStyle>
+<PolyStyle>
+<color>33ff0000</color>
+</PolyStyle>
+</Style>
+<Folder>
+<name>Collimator flight plan</name>
+<open>1</open>
+<Placemark>
+<name>AOI Quebec</name>
+<styleUrl>#flightplan2</styleUrl>
+<Polygon>
+<tessellate>1</tessellate>
+<outerBoundaryIs>
+<LinearRing>
+<coordinates>
+-71.224538,46.791865,0 -71.203081,46.803665,0 -71.195158,46.825593,0 -71.210880,46.822689,0 -71.242248,46.806997,0 -71.224538,46.791865,0 </coordinates>
+</LinearRing>
+</outerBoundaryIs>
+</Polygon>
+</Placemark>
+<Folder>
+<name>Block 01</name><open>1</open><Placemark>
+<name>Line 01</name>
+<styleUrl>#flightplan1</styleUrl>
+<LineString>
+<tessellate>1</tessellate>
+<coordinates>
+-71.202523,46.805228,0 -71.225020,46.792264,0 
+</coordinates>
+</LineString>
+</Placemark>
+<Placemark>
+<name>Line 02</name>
+<styleUrl>#flightplan1</styleUrl>
+<LineString>
+<tessellate>1</tessellate>
+<coordinates>
+-71.201546,46.807928,0 -71.226512,46.793541,0 
+</coordinates>
+</LineString>
+</Placemark>
+<Placemark>
+<name>Line 03</name>
+<styleUrl>#flightplan1</styleUrl>
+<LineString>
+<tessellate>1</tessellate>
+<coordinates>
+-71.200569,46.810627,0 -71.228005,46.794819,0 
+</coordinates>
+</LineString>
+</Placemark>
+<Placemark>
+<name>Line 04</name>
+<styleUrl>#flightplan1</styleUrl>
+<LineString>
+<tessellate>1</tessellate>
+<coordinates>
+-71.199591,46.813327,0 -71.229497,46.796096,0 
+</coordinates>
+</LineString>
+</Placemark>
+<Placemark>
+<name>Line 05</name>
+<styleUrl>#flightplan1</styleUrl>
+<LineString>
+<tessellate>1</tessellate>
+<coordinates>
+-71.198634,46.816015,0 -71.230990,46.797373,0 
+</coordinates>
+</LineString>
+</Placemark>
+<Placemark>
+<name>Line 06</name>
+<styleUrl>#flightplan1</styleUrl>
+<LineString>
+<tessellate>1</tessellate>
+<coordinates>
+-71.197656,46.818714,0 -71.232483,46.798651,0 
+</coordinates>
+</LineString>
+</Placemark>
+<Placemark>
+<name>Line 07</name>
+<styleUrl>#flightplan1</styleUrl>
+<LineString>
+<tessellate>1</tessellate>
+<coordinates>
+-71.196678,46.821413,0 -71.233976,46.799928,0 
+</coordinates>
+</LineString>
+</Placemark>
+<Placemark>
+<name>Line 08</name>
+<styleUrl>#flightplan1</styleUrl>
+<LineString>
+<tessellate>1</tessellate>
+<coordinates>
+-71.195700,46.824112,0 -71.235489,46.801194,0 
+</coordinates>
+</LineString>
+</Placemark>
+<Placemark>
+<name>Line 09</name>
+<styleUrl>#flightplan1</styleUrl>
+<LineString>
+<tessellate>1</tessellate>
+<coordinates>
+-71.197634,46.825135,0 -71.236982,46.802471,0 
+</coordinates>
+</LineString>
+</Placemark>
+<Placemark>
+<name>Line 10</name>
+<styleUrl>#flightplan1</styleUrl>
+<LineString>
+<tessellate>1</tessellate>
+<coordinates>
+-71.203103,46.824124,0 -71.238475,46.803748,0 
+</coordinates>
+</LineString>
+</Placemark>
+<Placemark>
+<name>Line 11</name>
+<styleUrl>#flightplan1</styleUrl>
+<LineString>
+<tessellate>1</tessellate>
+<coordinates>
+-71.208571,46.823112,0 -71.239968,46.805025,0 
+</coordinates>
+</LineString>
+</Placemark>
+<Placemark>
+<name>Line 12</name>
+<styleUrl>#flightplan1</styleUrl>
+<LineString>
+<tessellate>1</tessellate>
+<coordinates>
+-71.227150,46.814549,0 -71.241462,46.806302,0 
+</coordinates>
+</LineString>
+</Placemark>
+</Folder><Placemark>
+<name>AOI Levis</name>
+<styleUrl>#flightplan2</styleUrl>
+<Polygon>
+<tessellate>1</tessellate>
+<outerBoundaryIs>
+<LinearRing>
+<coordinates>
+-71.167708,46.775490,0 -71.152328,46.786012,0 -71.172122,46.800394,0 -71.187274,46.789090,0 -71.167708,46.775490,0 </coordinates>
+</LinearRing>
+</outerBoundaryIs>
+</Polygon>
+</Placemark>
+<Folder>
+<name>Block 02</name><open>1</open><Placemark>
+<name>Line 01</name>
+<styleUrl>#flightplan1</styleUrl>
+<LineString>
+<tessellate>1</tessellate>
+<coordinates>
+-71.186155,46.789901,0 -71.166432,46.776352,0 
+</coordinates>
+</LineString>
+</Placemark>
+<Placemark>
+<name>Line 02</name>
+<styleUrl>#flightplan1</styleUrl>
+<LineString>
+<tessellate>1</tessellate>
+<coordinates>
+-71.183998,46.791510,0 -71.164181,46.777898,0 
+</coordinates>
+</LineString>
+</Placemark>
+<Placemark>
+<name>Line 03</name>
+<styleUrl>#flightplan1</styleUrl>
+<LineString>
+<tessellate>1</tessellate>
+<coordinates>
+-71.181841,46.793119,0 -71.161912,46.779431,0 
+</coordinates>
+</LineString>
+</Placemark>
+<Placemark>
+<name>Line 04</name>
+<styleUrl>#flightplan1</styleUrl>
+<LineString>
+<tessellate>1</tessellate>
+<coordinates>
+-71.179683,46.794729,0 -71.159662,46.780976,0 
+</coordinates>
+</LineString>
+</Placemark>
+<Placemark>
+<name>Line 05</name>
+<styleUrl>#flightplan1</styleUrl>
+<LineString>
+<tessellate>1</tessellate>
+<coordinates>
+-71.177526,46.796338,0 -71.157411,46.782522,0 
+</coordinates>
+</LineString>
+</Placemark>
+<Placemark>
+<name>Line 06</name>
+<styleUrl>#flightplan1</styleUrl>
+<LineString>
+<tessellate>1</tessellate>
+<coordinates>
+-71.175368,46.797947,0 -71.155160,46.784068,0 
+</coordinates>
+</LineString>
+</Placemark>
+<Placemark>
+<name>Line 07</name>
+<styleUrl>#flightplan1</styleUrl>
+<LineString>
+<tessellate>1</tessellate>
+<coordinates>
+-71.173211,46.799556,0 -71.152910,46.785613,0 
+</coordinates>
+</LineString>
+</Placemark>
+</Folder></Folder>
+</Document>
+</kml>
