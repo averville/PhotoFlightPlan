@@ -1,0 +1,100 @@
+================================================
+2017.01.02 13:11:53 PhotoFlightPlan V1.01 output
+================================================
+parameters file:   photoflightplan.par
+flight plan file:  photoflightplan.pfp (this file)
+Google Earth file: photoflightplan.kml
+flightblock:       01
+aoiname:           Quebec
+aoiextent:         250 m
+lensfocal:         35.0 mm (imposed)
+resolution:        6.0 cm
+sensor_xpix:       8688 pixels
+sensor_xmm:        36.0 mm
+sensor_ypix:       5792 pixels
+sensor_ymm:        24.0 mm
+wind_direction:    230 degrees
+overlap:           80%
+sidelap:           65%
+imagewidth:        521 m
+imageheight:       348 m
+altitudeaglm:      507 m (computed)
+altitudeaglft:     1663 ft (computed)
+triggerdist:       70 m
+corridorwidth:     182 m
+
+--------------------------------
+AOI Polygon points (5):
+From file: Quebec.kml
+--------------------------------
+polygon: 01 46.791865 -71.224538
+polygon: 02 46.803665 -71.203081
+polygon: 03 46.825593 -71.195158
+polygon: 04 46.822689 -71.210880
+polygon: 05 46.806997 -71.242248
+polygon: 01 46.791865 -71.224538
+--------------------------------
+
+Flight lines (12):
+-----------------------------------------------------------
+flightline: 01 01 46.805228 -71.202523 46.792264 -71.225020
+flightline: 01 02 46.807928 -71.201546 46.793541 -71.226512
+flightline: 01 03 46.810627 -71.200569 46.794819 -71.228005
+flightline: 01 04 46.813327 -71.199591 46.796096 -71.229497
+flightline: 01 05 46.816015 -71.198634 46.797373 -71.230990
+flightline: 01 06 46.818714 -71.197656 46.798651 -71.232483
+flightline: 01 07 46.821413 -71.196678 46.799928 -71.233976
+flightline: 01 08 46.824112 -71.195700 46.801194 -71.235489
+flightline: 01 09 46.825135 -71.197634 46.802471 -71.236982
+flightline: 01 10 46.824124 -71.203103 46.803748 -71.238475
+flightline: 01 11 46.823112 -71.208571 46.805025 -71.239968
+flightline: 01 12 46.814549 -71.227150 46.806302 -71.241462
+-----------------------------------------------------------
+
+================================================
+2017.01.02 13:11:58 PhotoFlightPlan V1.01 output
+================================================
+parameters file:   photoflightplan.par
+flight plan file:  photoflightplan.pfp (this file)
+Google Earth file: photoflightplan.kml
+flightblock:       02
+aoiname:           Levis
+aoiextent:         250 m
+lensfocal:         35.0 mm (imposed)
+resolution:        8.0 cm
+sensor_xpix:       8688 pixels
+sensor_xmm:        36.0 mm
+sensor_ypix:       5792 pixels
+sensor_ymm:        24.0 mm
+wind_direction:    135 degrees
+overlap:           80%
+sidelap:           65%
+imagewidth:        695 m
+imageheight:       463 m
+altitudeaglm:      676 m (computed)
+altitudeaglft:     2217 ft (computed)
+triggerdist:       93 m
+corridorwidth:     243 m
+
+--------------------------------
+AOI Polygon points (4):
+From parameters file
+--------------------------------
+polygon: 01 46.775490 -71.167708
+polygon: 02 46.786012 -71.152328
+polygon: 03 46.800394 -71.172122
+polygon: 04 46.789090 -71.187274
+polygon: 01 46.775490 -71.167708
+--------------------------------
+
+Flight lines (7):
+-----------------------------------------------------------
+flightline: 02 01 46.789901 -71.186155 46.776352 -71.166432
+flightline: 02 02 46.791510 -71.183998 46.777898 -71.164181
+flightline: 02 03 46.793119 -71.181841 46.779431 -71.161912
+flightline: 02 04 46.794729 -71.179683 46.780976 -71.159662
+flightline: 02 05 46.796338 -71.177526 46.782522 -71.157411
+flightline: 02 06 46.797947 -71.175368 46.784068 -71.155160
+flightline: 02 07 46.799556 -71.173211 46.785613 -71.152910
+-----------------------------------------------------------
+
