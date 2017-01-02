@@ -1,0 +1,61 @@
+# ===================================
+# flightplan.py V1.0x parameters file
+# Kildir Technologies (kildir.com)
+# ===================================
+
+# ======================================================
+# Area of interest polygon (number, latitude, longitude)
+# first point repeated at the end for last polygon point
+# ------------------------------------------------------
+aoiname = "Quebec"  # appears in .pfp and .kml outputs
+aoiextent = "250"  # extension of the AOI for photo coverage by Collimator (in meters)
+aoikml = "Quebec.kml"  # if AOI provided in a kml file, "none" if points are listed below
+
+polygon = "01 46.791865 -71.224538"
+polygon = "02 46.803665 -71.203081"
+polygon = "03 46.825593 -71.195158"
+polygon = "04 46.822689 -71.210880"
+polygon = "05 46.806997 -71.242248"
+polygon = "01 46.791865 -71.224538"
+
+# Project parameters (id, value and comments)
+# -------------------------------------------
+altitudeaglft = "compute"  # altitude constraint ("compute" if left open)
+lensfocal = "35.0"  # lens focal length in millimiters ("compute" if left open)
+resolution = "6.0"  # desired pixel ground resolution in centimeters
+sensor_xpix = "8688"  # pixel width for Canon EOS 5DS (swath direction)
+sensor_xmm = "36.0"  # sensor width in millimeters for Canon EOS 5DS (swath direction)
+sensor_ypix = "5792"  # pixel height for Canon EOS 5DS (flight direction)
+sensor_ymm = "24.0"  # sensor height in millimeters for Canon EOS 5DS (flight direction)
+wind_direction = "230"  # wind direction in degrees (real)
+overlap = "80"  # in percentage
+sidelap = "65"  # in percentage
+flightblock = "01"  # 01, 02, 03, etc (must be the last statement of a block to process)
+
+# ======================================================
+# Area of interest polygon (number, latitude, longitude)
+# first point repeated at the end for last polygon point
+# ------------------------------------------------------
+aoiname = "Levis"  # appears in .pfp and .kml outputs
+aoiextent = "250"  # extension of the AOI for photo coverage by Collimator (in meters)
+aoikml = "none"  # if AOI provided in a kml file, "none" if points are listed below
+
+polygon = "01 46.775490 -71.167708"
+polygon = "02 46.786012 -71.152328"
+polygon = "03 46.800394 -71.172122"
+polygon = "04 46.789090 -71.187274"
+polygon = "01 46.775490 -71.167708"
+
+# Project parameters
+# ------------------
+altitudeaglft = "compute"  # altitude constraint ("compute" if left open)
+lensfocal = "35.0"  # lens focal length in millimiters ("compute" if left open)
+resolution = "8.0"  # desired pixel ground resolution in centimeters
+sensor_xpix = "8688"  # pixel width for Canon EOS 5DS (swath direction)
+sensor_xmm = "36.0"  # sensor width in millimeters for Canon EOS 5DS (swath direction)
+sensor_ypix = "5792"  # pixel height for Canon EOS 5DS (flight direction)
+sensor_ymm = "24.0"  # sensor height in millimeters for Canon EOS 5DS (flight direction)
+wind_direction = "135"  # wind direction in degrees (real)
+overlap = "80"  # in percentage
+sidelap = "65"  # in percentage
+flightblock = "02"  # 01, 02, 03, etc (must be the last statement of a block to process)
