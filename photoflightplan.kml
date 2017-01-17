@@ -42,7 +42,7 @@
 <LineString>
 <tessellate>1</tessellate>
 <coordinates>
--71.202523,46.805228,0 -71.225020,46.792264,0 
+-71.202378,46.805641,0 -71.225255,46.792457,0 
 </coordinates>
 </LineString>
 </Placemark>
@@ -52,7 +52,7 @@
 <LineString>
 <tessellate>1</tessellate>
 <coordinates>
--71.201546,46.807928,0 -71.226512,46.793541,0 
+-71.201569,46.807891,0 -71.226495,46.793527,0 
 </coordinates>
 </LineString>
 </Placemark>
@@ -62,7 +62,7 @@
 <LineString>
 <tessellate>1</tessellate>
 <coordinates>
--71.200569,46.810627,0 -71.228005,46.794819,0 
+-71.200741,46.810153,0 -71.227755,46.794586,0 
 </coordinates>
 </LineString>
 </Placemark>
@@ -72,7 +72,7 @@
 <LineString>
 <tessellate>1</tessellate>
 <coordinates>
--71.199591,46.813327,0 -71.229497,46.796096,0 
+-71.199933,46.812402,0 -71.228995,46.795657,0 
 </coordinates>
 </LineString>
 </Placemark>
@@ -82,7 +82,7 @@
 <LineString>
 <tessellate>1</tessellate>
 <coordinates>
--71.198634,46.816015,0 -71.230990,46.797373,0 
+-71.199124,46.814652,0 -71.230235,46.796728,0 
 </coordinates>
 </LineString>
 </Placemark>
@@ -92,7 +92,7 @@
 <LineString>
 <tessellate>1</tessellate>
 <coordinates>
--71.197656,46.818714,0 -71.232483,46.798651,0 
+-71.198296,46.816914,0 -71.231496,46.797787,0 
 </coordinates>
 </LineString>
 </Placemark>
@@ -102,7 +102,7 @@
 <LineString>
 <tessellate>1</tessellate>
 <coordinates>
--71.196678,46.821413,0 -71.233976,46.799928,0 
+-71.197487,46.819164,0 -71.232736,46.798857,0 
 </coordinates>
 </LineString>
 </Placemark>
@@ -112,7 +112,7 @@
 <LineString>
 <tessellate>1</tessellate>
 <coordinates>
--71.195700,46.824112,0 -71.235489,46.801194,0 
+-71.196678,46.821413,0 -71.233976,46.799928,0 
 </coordinates>
 </LineString>
 </Placemark>
@@ -122,7 +122,7 @@
 <LineString>
 <tessellate>1</tessellate>
 <coordinates>
--71.197634,46.825135,0 -71.236982,46.802471,0 
+-71.195869,46.823663,0 -71.235236,46.800987,0 
 </coordinates>
 </LineString>
 </Placemark>
@@ -132,7 +132,7 @@
 <LineString>
 <tessellate>1</tessellate>
 <coordinates>
--71.203103,46.824124,0 -71.238475,46.803748,0 
+-71.195843,46.825462,0 -71.236477,46.802057,0 
 </coordinates>
 </LineString>
 </Placemark>
@@ -142,7 +142,7 @@
 <LineString>
 <tessellate>1</tessellate>
 <coordinates>
--71.208571,46.823112,0 -71.239968,46.805025,0 
+-71.200397,46.824625,0 -71.237737,46.803116,0 
 </coordinates>
 </LineString>
 </Placemark>
@@ -152,7 +152,27 @@
 <LineString>
 <tessellate>1</tessellate>
 <coordinates>
--71.227150,46.814549,0 -71.241462,46.806302,0 
+-71.204970,46.823776,0 -71.238977,46.804187,0 
+</coordinates>
+</LineString>
+</Placemark>
+<Placemark>
+<name>Line 13</name>
+<styleUrl>#flightplan1</styleUrl>
+<LineString>
+<tessellate>1</tessellate>
+<coordinates>
+-71.209523,46.822939,0 -71.240218,46.805257,0 
+</coordinates>
+</LineString>
+</Placemark>
+<Placemark>
+<name>Line 14</name>
+<styleUrl>#flightplan1</styleUrl>
+<LineString>
+<tessellate>1</tessellate>
+<coordinates>
+-71.227468,46.814389,0 -71.241478,46.806316,0 
 </coordinates>
 </LineString>
 </Placemark>
@@ -176,7 +196,7 @@
 <LineString>
 <tessellate>1</tessellate>
 <coordinates>
--71.186155,46.789901,0 -71.166432,46.776352,0 
+-71.187220,46.789118,0 -71.167543,46.775601,0 
 </coordinates>
 </LineString>
 </Placemark>
@@ -186,7 +206,7 @@
 <LineString>
 <tessellate>1</tessellate>
 <coordinates>
--71.183998,46.791510,0 -71.164181,46.777898,0 
+-71.186285,46.789824,0 -71.166552,46.776269,0 
 </coordinates>
 </LineString>
 </Placemark>
@@ -196,7 +216,7 @@
 <LineString>
 <tessellate>1</tessellate>
 <coordinates>
--71.181841,46.793119,0 -71.161912,46.779431,0 
+-71.185340,46.790524,0 -71.165571,46.776944,0 
 </coordinates>
 </LineString>
 </Placemark>
@@ -206,7 +226,7 @@
 <LineString>
 <tessellate>1</tessellate>
 <coordinates>
--71.179683,46.794729,0 -71.159662,46.780976,0 
+-71.184405,46.791230,0 -71.164589,46.777618,0 
 </coordinates>
 </LineString>
 </Placemark>
@@ -216,7 +236,7 @@
 <LineString>
 <tessellate>1</tessellate>
 <coordinates>
--71.177526,46.796338,0 -71.157411,46.782522,0 
+-71.183461,46.791930,0 -71.163607,46.778292,0 
 </coordinates>
 </LineString>
 </Placemark>
@@ -226,7 +246,7 @@
 <LineString>
 <tessellate>1</tessellate>
 <coordinates>
--71.175368,46.797947,0 -71.155160,46.784068,0 
+-71.182517,46.792629,0 -71.162626,46.778966,0 
 </coordinates>
 </LineString>
 </Placemark>
@@ -236,7 +256,107 @@
 <LineString>
 <tessellate>1</tessellate>
 <coordinates>
--71.173211,46.799556,0 -71.152910,46.785613,0 
+-71.181581,46.793335,0 -71.161635,46.779634,0 
+</coordinates>
+</LineString>
+</Placemark>
+<Placemark>
+<name>Line 08</name>
+<styleUrl>#flightplan1</styleUrl>
+<LineString>
+<tessellate>1</tessellate>
+<coordinates>
+-71.180637,46.794035,0 -71.160653,46.780309,0 
+</coordinates>
+</LineString>
+</Placemark>
+<Placemark>
+<name>Line 09</name>
+<styleUrl>#flightplan1</styleUrl>
+<LineString>
+<tessellate>1</tessellate>
+<coordinates>
+-71.179693,46.794735,0 -71.159671,46.780983,0 
+</coordinates>
+</LineString>
+</Placemark>
+<Placemark>
+<name>Line 10</name>
+<styleUrl>#flightplan1</styleUrl>
+<LineString>
+<tessellate>1</tessellate>
+<coordinates>
+-71.178757,46.795441,0 -71.158689,46.781657,0 
+</coordinates>
+</LineString>
+</Placemark>
+<Placemark>
+<name>Line 11</name>
+<styleUrl>#flightplan1</styleUrl>
+<LineString>
+<tessellate>1</tessellate>
+<coordinates>
+-71.177813,46.796141,0 -71.157708,46.782331,0 
+</coordinates>
+</LineString>
+</Placemark>
+<Placemark>
+<name>Line 12</name>
+<styleUrl>#flightplan1</styleUrl>
+<LineString>
+<tessellate>1</tessellate>
+<coordinates>
+-71.176868,46.796840,0 -71.156717,46.782999,0 
+</coordinates>
+</LineString>
+</Placemark>
+<Placemark>
+<name>Line 13</name>
+<styleUrl>#flightplan1</styleUrl>
+<LineString>
+<tessellate>1</tessellate>
+<coordinates>
+-71.175933,46.797546,0 -71.155735,46.783673,0 
+</coordinates>
+</LineString>
+</Placemark>
+<Placemark>
+<name>Line 14</name>
+<styleUrl>#flightplan1</styleUrl>
+<LineString>
+<tessellate>1</tessellate>
+<coordinates>
+-71.174989,46.798246,0 -71.154753,46.784348,0 
+</coordinates>
+</LineString>
+</Placemark>
+<Placemark>
+<name>Line 15</name>
+<styleUrl>#flightplan1</styleUrl>
+<LineString>
+<tessellate>1</tessellate>
+<coordinates>
+-71.174053,46.798952,0 -71.153771,46.785022,0 
+</coordinates>
+</LineString>
+</Placemark>
+<Placemark>
+<name>Line 16</name>
+<styleUrl>#flightplan1</styleUrl>
+<LineString>
+<tessellate>1</tessellate>
+<coordinates>
+-71.173109,46.799652,0 -71.152789,46.785696,0 
+</coordinates>
+</LineString>
+</Placemark>
+<Placemark>
+<name>Line 17</name>
+<styleUrl>#flightplan1</styleUrl>
+<LineString>
+<tessellate>1</tessellate>
+<coordinates>
+-71.172164,46.800351,0 -71.170330,46.799092,0 
 </coordinates>
 </LineString>
 </Placemark>
