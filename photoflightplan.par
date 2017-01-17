@@ -22,7 +22,7 @@ polygon = "01 46.791865 -71.224538"
 # -------------------------------------------
 altitudeaglft = "compute"  # altitude constraint ("compute" if left open)
 lensfocal = "35.0"  # lens focal length in millimiters ("compute" if left open)
-resolution = "6.0"  # desired pixel ground resolution in centimeters
+resolution = "5.0"  # desired pixel ground resolution in centimeters
 sensor_xpix = "8688"  # pixel width for Canon EOS 5DS (swath direction)
 sensor_xmm = "36.0"  # sensor width in millimeters for Canon EOS 5DS (swath direction)
 sensor_ypix = "5792"  # pixel height for Canon EOS 5DS (flight direction)
@@ -49,8 +49,8 @@ polygon = "01 46.775490 -71.167708"
 # Project parameters
 # ------------------
 altitudeaglft = "compute"  # altitude constraint ("compute" if left open)
-lensfocal = "35.0"  # lens focal length in millimiters ("compute" if left open)
-resolution = "8.0"  # desired pixel ground resolution in centimeters
+lensfocal = "50.0"  # lens focal length in millimiters ("compute" if left open)
+resolution = "3.5"  # desired pixel ground resolution in centimeters
 sensor_xpix = "8688"  # pixel width for Canon EOS 5DS (swath direction)
 sensor_xmm = "36.0"  # sensor width in millimeters for Canon EOS 5DS (swath direction)
 sensor_ypix = "5792"  # pixel height for Canon EOS 5DS (flight direction)
