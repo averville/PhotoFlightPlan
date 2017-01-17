@@ -1,5 +1,5 @@
 ================================================
-2017.01.02 13:11:53 PhotoFlightPlan V1.01 output
+2017.01.17 14:23:28 PhotoFlightPlan V1.03 output
 ================================================
 parameters file:   photoflightplan.par
 flight plan file:  photoflightplan.pfp (this file)
@@ -8,7 +8,7 @@ flightblock:       01
 aoiname:           Quebec
 aoiextent:         250 m
 lensfocal:         35.0 mm (imposed)
-resolution:        6.0 cm
+resolution:        5.0 cm
 sensor_xpix:       8688 pixels
 sensor_xmm:        36.0 mm
 sensor_ypix:       5792 pixels
@@ -16,12 +16,14 @@ sensor_ymm:        24.0 mm
 wind_direction:    230 degrees
 overlap:           80%
 sidelap:           65%
-imagewidth:        521 m
-imageheight:       348 m
-altitudeaglm:      507 m (computed)
-altitudeaglft:     1663 ft (computed)
-triggerdist:       70 m
-corridorwidth:     182 m
+imagewidth:        434 m
+imageheight:       290 m
+altitudeaglm:      422 m (computed)
+altitudeaglft:     1386 ft (computed)
+triggerdist:       58 m
+corridorwidth:     152 m
+linear coverage:   50520 m
+frame count:       872 photos (approx)
 
 --------------------------------
 AOI Polygon points (5):
@@ -35,24 +37,26 @@ polygon: 05 46.806997 -71.242248
 polygon: 01 46.791865 -71.224538
 --------------------------------
 
-Flight lines (12):
+Flight lines (14):
 -----------------------------------------------------------
-flightline: 01 01 46.805228 -71.202523 46.792264 -71.225020
-flightline: 01 02 46.807928 -71.201546 46.793541 -71.226512
-flightline: 01 03 46.810627 -71.200569 46.794819 -71.228005
-flightline: 01 04 46.813327 -71.199591 46.796096 -71.229497
-flightline: 01 05 46.816015 -71.198634 46.797373 -71.230990
-flightline: 01 06 46.818714 -71.197656 46.798651 -71.232483
-flightline: 01 07 46.821413 -71.196678 46.799928 -71.233976
-flightline: 01 08 46.824112 -71.195700 46.801194 -71.235489
-flightline: 01 09 46.825135 -71.197634 46.802471 -71.236982
-flightline: 01 10 46.824124 -71.203103 46.803748 -71.238475
-flightline: 01 11 46.823112 -71.208571 46.805025 -71.239968
-flightline: 01 12 46.814549 -71.227150 46.806302 -71.241462
+flightline: 01 01 46.805641 -71.202378 46.792457 -71.225255
+flightline: 01 02 46.807891 -71.201569 46.793527 -71.226495
+flightline: 01 03 46.810153 -71.200741 46.794586 -71.227755
+flightline: 01 04 46.812402 -71.199933 46.795657 -71.228995
+flightline: 01 05 46.814652 -71.199124 46.796728 -71.230235
+flightline: 01 06 46.816914 -71.198296 46.797787 -71.231496
+flightline: 01 07 46.819164 -71.197487 46.798857 -71.232736
+flightline: 01 08 46.821413 -71.196678 46.799928 -71.233976
+flightline: 01 09 46.823663 -71.195869 46.800987 -71.235236
+flightline: 01 10 46.825462 -71.195843 46.802057 -71.236477
+flightline: 01 11 46.824625 -71.200397 46.803116 -71.237737
+flightline: 01 12 46.823776 -71.204970 46.804187 -71.238977
+flightline: 01 13 46.822939 -71.209523 46.805257 -71.240218
+flightline: 01 14 46.814389 -71.227468 46.806316 -71.241478
 -----------------------------------------------------------
 
 ================================================
-2017.01.02 13:11:58 PhotoFlightPlan V1.01 output
+2017.01.17 14:23:32 PhotoFlightPlan V1.03 output
 ================================================
 parameters file:   photoflightplan.par
 flight plan file:  photoflightplan.pfp (this file)
@@ -60,8 +64,8 @@ Google Earth file: photoflightplan.kml
 flightblock:       02
 aoiname:           Levis
 aoiextent:         250 m
-lensfocal:         35.0 mm (imposed)
-resolution:        8.0 cm
+lensfocal:         50.0 mm (imposed)
+resolution:        3.5 cm
 sensor_xpix:       8688 pixels
 sensor_xmm:        36.0 mm
 sensor_ypix:       5792 pixels
@@ -69,12 +73,14 @@ sensor_ymm:        24.0 mm
 wind_direction:    135 degrees
 overlap:           80%
 sidelap:           65%
-imagewidth:        695 m
-imageheight:       463 m
-altitudeaglm:      676 m (computed)
-altitudeaglft:     2217 ft (computed)
-triggerdist:       93 m
-corridorwidth:     243 m
+imagewidth:        304 m
+imageheight:       203 m
+altitudeaglm:      422 m (computed)
+altitudeaglft:     1386 ft (computed)
+triggerdist:       41 m
+corridorwidth:     106 m
+linear coverage:   93779 m
+frame count:       2313 photos (approx)
 
 --------------------------------
 AOI Polygon points (4):
@@ -87,14 +93,24 @@ polygon: 04 46.789090 -71.187274
 polygon: 01 46.775490 -71.167708
 --------------------------------
 
-Flight lines (7):
+Flight lines (17):
 -----------------------------------------------------------
-flightline: 02 01 46.789901 -71.186155 46.776352 -71.166432
-flightline: 02 02 46.791510 -71.183998 46.777898 -71.164181
-flightline: 02 03 46.793119 -71.181841 46.779431 -71.161912
-flightline: 02 04 46.794729 -71.179683 46.780976 -71.159662
-flightline: 02 05 46.796338 -71.177526 46.782522 -71.157411
-flightline: 02 06 46.797947 -71.175368 46.784068 -71.155160
-flightline: 02 07 46.799556 -71.173211 46.785613 -71.152910
+flightline: 02 01 46.789118 -71.187220 46.775601 -71.167543
+flightline: 02 02 46.789824 -71.186285 46.776269 -71.166552
+flightline: 02 03 46.790524 -71.185340 46.776944 -71.165571
+flightline: 02 04 46.791230 -71.184405 46.777618 -71.164589
+flightline: 02 05 46.791930 -71.183461 46.778292 -71.163607
+flightline: 02 06 46.792629 -71.182517 46.778966 -71.162626
+flightline: 02 07 46.793335 -71.181581 46.779634 -71.161635
+flightline: 02 08 46.794035 -71.180637 46.780309 -71.160653
+flightline: 02 09 46.794735 -71.179693 46.780983 -71.159671
+flightline: 02 10 46.795441 -71.178757 46.781657 -71.158689
+flightline: 02 11 46.796141 -71.177813 46.782331 -71.157708
+flightline: 02 12 46.796840 -71.176868 46.782999 -71.156717
+flightline: 02 13 46.797546 -71.175933 46.783673 -71.155735
+flightline: 02 14 46.798246 -71.174989 46.784348 -71.154753
+flightline: 02 15 46.798952 -71.174053 46.785022 -71.153771
+flightline: 02 16 46.799652 -71.173109 46.785696 -71.152789
+flightline: 02 17 46.800351 -71.172164 46.799092 -71.170330
 -----------------------------------------------------------
 
