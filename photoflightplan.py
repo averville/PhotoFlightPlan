@@ -1,6 +1,6 @@
 #! /usr/bin/python3
 #############################################################
-# photoflightplan1.03.py by Kildir Technologies, GPL license
+# photoflightplan1.04.py by Kildir Technologies, GPL license
 # André Verville 2016.12.20 and +
 # Photographic flight plan generation for manned aircrafts
 # produces a flight plan (.pfp) data file for Collimator,
@@ -57,7 +57,7 @@ def pointinpolygon(x, y, poly):
 # ----------------------------------------------------
 def abnormalend():
     global logfile
-    msghd = time.strftime("%Y.%m.%d %H:%M:%S") + " PhotoFlightPlan V1.03: "
+    msghd = time.strftime("%Y.%m.%d %H:%M:%S") + " PhotoFlightPlan V1.04: "
     logfile.write(msghd + "Abnormal End\n")
     print(msghd + "Stop - Please check log file")
     exit()
@@ -173,7 +173,7 @@ linelength = 0  # total flight line length to compute number of photo frames
 # Opening log file for execution time and error tracking
 # ------------------------------------------------------
 logfile = open("photoflightplan.log", "a")
-loghead = time.strftime("%Y.%m.%d %H:%M:%S") + " PhotoFlightPlan V1.03: "
+loghead = time.strftime("%Y.%m.%d %H:%M:%S") + " PhotoFlightPlan V1.04: "
 logfile.write("\n" + loghead + "Startup\n")
 
 # Reading provided arguments from the command line
@@ -183,13 +183,13 @@ args, nbargs = sys.argv, len(sys.argv)
 for index in range(1, nbargs, 1):
     if ".par" in sys.argv[index]: parname = sys.argv[index]
     if ".pfp" in sys.argv[index]: pfpname = sys.argv[index]
-    if ".kml" in sys.argv[index]: kmlname = sys.argv[index]
+    if ".kml" in sys.argv[index]: kmlinputname = sys.argv[index]
 try: parname
 except NameError: parname = "photoflightplan.par"
 try: pfpname
 except NameError: pfpname = "photoflightplan.pfp"
-try: kmlname
-except NameError: kmlname = "photoflightplan.kml"
+try: kmlinputname
+except NameError: kmlinputname = "photoflightplan.kml"
 
 # Opening the flight plan file for flight data and report
 # This file is opened by Collimator to get its project info
@@ -201,14 +201,14 @@ planfile = open(pfpname, "w")
 try:
     parfile = open(parname, "r")  # the parameters file reading buffer
 except:
-    loghead = time.strftime("%Y.%m.%d %H:%M:%S") + " PhotoFlightPlan V1.03: "
+    loghead = time.strftime("%Y.%m.%d %H:%M:%S") + " PhotoFlightPlan V1.04: "
     logfile.write(loghead + "Error file " + parname + " not found\n")
     abnormalend()
 
 # Printing startup message
 # ------------------------
 print("------------------------------------------------------------")
-print(time.strftime("%Y.%m.%d %H:%M:%S"), " PhotoFlightPlan V1.03 by André Verville")
+print(time.strftime("%Y.%m.%d %H:%M:%S"), " PhotoFlightPlan V1.04 by André Verville")
 print("------------------------------------------------------------")
 
 while readparams():  # process if this is a dataset
@@ -244,7 +244,7 @@ while readparams():  # process if this is a dataset
     try: polygon
     except NameError: paramerror = 'No parameter provided for "area of interest"\n'
     if paramerror != "":  # if paramerror contains something, something is wrong
-        loghead = time.strftime("%Y.%m.%d %H:%M:%S") + " PhotoFlightPlan V1.03: "
+        loghead = time.strftime("%Y.%m.%d %H:%M:%S") + " PhotoFlightPlan V1.04: "
         logfile.write(loghead + paramerror)
         logfile.write(loghead + "Abnormal End\n")
         print(loghead, "Abnormal End - see .log file for error status")
@@ -252,7 +252,7 @@ while readparams():  # process if this is a dataset
 
     # Parameters input done, starting processing
     # ------------------------------------------
-    loghead = time.strftime("%Y.%m.%d %H:%M:%S") + " PhotoFlightPlan V1.03: "
+    loghead = time.strftime("%Y.%m.%d %H:%M:%S") + " PhotoFlightPlan V1.04: "
     logfile.write(loghead + "Processing block" + flightblock + "\n")
 
     # If the user provides an AOI polygon within a kml file
@@ -270,7 +270,7 @@ while readparams():  # process if this is a dataset
             aoikmlfile.close
 
         except:  # catch all for any type of error but most probably "file not found"
-            loghead = time.strftime("%Y.%m.%d %H:%M:%S") + " PhotoFlightPlan V1.03: "
+            loghead = time.strftime("%Y.%m.%d %H:%M:%S") + " PhotoFlightPlan V1.04: "
             logfile.write(loghead + "Error file " + aoikml + " not found\n")
             abnormalend()
 
@@ -286,23 +286,23 @@ while readparams():  # process if this is a dataset
         for index in range(0, len(lonlatpoly), 2):  # inversing pairs for lat before lon
             polygon = polygon + [lonlatpoly[index + 1]]
             polygon = polygon + [lonlatpoly[index]]
-        loghead = time.strftime("%Y.%m.%d %H:%M:%S") + " PhotoFlightPlan V1.03: "
+        loghead = time.strftime("%Y.%m.%d %H:%M:%S") + " PhotoFlightPlan V1.04: "
         logfile.write(loghead + "Using AOI polygon from " + aoikml + " \n")
     else:
-        loghead = time.strftime("%Y.%m.%d %H:%M:%S") + " PhotoFlightPlan V1.03: "
+        loghead = time.strftime("%Y.%m.%d %H:%M:%S") + " PhotoFlightPlan V1.04: "
         logfile.write(loghead + "Using AOI polygon provided within parameters file\n")
 
     # Check if polygon list is empty, this would mean we found no polygon points
     # --------------------------------------------------------------------------
     if polygon == []:
-        loghead = time.strftime("%Y.%m.%d %H:%M:%S") + " PhotoFlightPlan V1.03: "
+        loghead = time.strftime("%Y.%m.%d %H:%M:%S") + " PhotoFlightPlan V1.04: "
         logfile.write(loghead + "No AOI polygon points found, please check input\n")
         abnormalend()
 
     # Writing down the block header in the flight plan file (.pfp)
     # ------------------------------------------------------------
     planfile.write("================================================\n")
-    planfile.write(time.strftime("%Y.%m.%d %H:%M:%S") + " PhotoFlightPlan V1.03 output\n")
+    planfile.write(time.strftime("%Y.%m.%d %H:%M:%S") + " PhotoFlightPlan V1.04 output\n")
     planfile.write("================================================\n")
 
     # Initial computations
@@ -317,7 +317,7 @@ while readparams():  # process if this is a dataset
     # or computing lens focal from flight altitude
     # -------------------------------------------------
     if altitudeaglft == "compute" and lensfocal == "compute":
-        loghead = time.strftime("%Y.%m.%d %H:%M:%S") + " PhotoFlightPlan V1.03: "
+        loghead = time.strftime("%Y.%m.%d %H:%M:%S") + " PhotoFlightPlan V1.04: "
         msg = "Error - cannot compute altitudeaglft AND lensfocal at the same time\n"
         logfile.write(loghead + msg)
         abnormalend()
@@ -325,7 +325,7 @@ while readparams():  # process if this is a dataset
         lensfocal = float(lensfocal)
         altitudeaglm = imagewidth * lensfocal / sensorxmm
         altmode = " (computed)\n"
-        loghead = time.strftime("%Y.%m.%d %H:%M:%S") + " PhotoFlightPlan V1.03: "
+        loghead = time.strftime("%Y.%m.%d %H:%M:%S") + " PhotoFlightPlan V1.04: "
         logfile.write(loghead + "Given lensfocal, flight altitude computed\n")
     else:
         altitudeaglft = float(altitudeaglft)
@@ -334,7 +334,7 @@ while readparams():  # process if this is a dataset
         altitudeaglm = float(altitudeaglft) * 0.3048
         lensfocal = altitudeaglm * sensorxmm / imagewidth
         lensmode = " (computed)\n"
-        loghead = time.strftime("%Y.%m.%d %H:%M:%S") + " PhotoFlightPlan V1.03: "
+        loghead = time.strftime("%Y.%m.%d %H:%M:%S") + " PhotoFlightPlan V1.04: "
         logfile.write(loghead + "Given flight altitude, lens focal computed\n")
     else:
         lensfocal = float(lensfocal)
@@ -345,7 +345,8 @@ while readparams():  # process if this is a dataset
     # ---------------------------------------------------
     planfile.write("parameters file:   " + parname + "\n")
     planfile.write("flight plan file:  " + pfpname + " (this file)\n")
-    planfile.write("Google Earth file: " + kmlname + "\n")
+    kmloutputname = pfpname.replace(".pfp", ".kml")  # same name as .pfp
+    planfile.write("Google Earth file: " + kmloutputname + "\n")
     planfile.write("flightblock:       " + flightblock + "\n")
     planfile.write("aoiname:           " + str(aoiname) + "\n")
     planfile.write("aoiextent:         " + str(round(aoiextent)) + " m\n")
@@ -379,7 +380,7 @@ while readparams():  # process if this is a dataset
 
     # Compute the scan width and angles in all directions
     # --------------------------------------------------
-    scanwidth = corridorwidth * 50  # see comment below (outer loop comment)
+    scanwidth = corridorwidth * 100  # see comment below (outer loop comment)
     northacross = winddir + 90
     if northacross > 90 and northacross < 270:  # make sure we are going North-something
         northacross = northacross + 180
@@ -389,10 +390,11 @@ while readparams():  # process if this is a dataset
     # ---------------------------------------------------------------
     isaflightline = False # beginning status
     flightlines = []
+    linelength = 0
 
     # Outer loop where we move by corridor width from south to north (+/-)
     # starting well off the polygon, finishing well off also
-    # this routine good for AOIs not bigger than 50 corridor widths
+    # this routine good for AOIs not bigger than 100 corridor widths
     # if by any chance it is the case, we can change scanwidth to something
     # a greater multiple of corridorwidth, will just take longer to process
     # --------------------------------------------------------------------
@@ -493,13 +495,13 @@ while readparams():  # process if this is a dataset
     # note: header data generated only once
     # ----------------------------------------------------
     while not kmlheader:
-        kmlfile = open(kmlname, "w")
+        kmlfile = open(kmloutputname, "w")
         kmlfile.write('<?xml version="1.0" encoding="UTF-8"?>\n')
         kmlfile.write('<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http:')
         kmlfile.write('//www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net')
         kmlfile.write('/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">\n')
         kmlfile.write("<Document>\n")
-        kmlfile.write("<name>flightplan.kml</name>\n")
+        kmlfile.write("<name>" + kmloutputname + "</name>\n")
         kmlfile.write('<StyleMap id="kildirtech">\n')
         kmlfile.write("</StyleMap>\n")
         kmlfile.write('<Style id="flightplan1">\n')
@@ -567,7 +569,7 @@ while readparams():  # process if this is a dataset
     # Print summary for this block
     # ----------------------------
     print("\nFound and recorded", nbflightlines, "flight lines for block", flightblock)
-    loghead = time.strftime("%Y.%m.%d %H:%M:%S") + " PhotoFlightPlan V1.03: "
+    loghead = time.strftime("%Y.%m.%d %H:%M:%S") + " PhotoFlightPlan V1.04: "
     logfile.write(loghead + str(nbflightlines) + " flight lines computed for block")
     logfile.write(flightblock + "\n")
 
@@ -584,7 +586,7 @@ while readparams():  # process if this is a dataset
 try: flightblock
 except NameError: paramerror = 'No parameter provided for "flightblock"\n'
 if paramerror != "":  # if paramerror contains something, meaning something is wrong
-    loghead = time.strftime("%Y.%m.%d %H:%M:%S") + " PhotoFlightPlan V1.03: "
+    loghead = time.strftime("%Y.%m.%d %H:%M:%S") + " PhotoFlightPlan V1.04: "
     logfile.write(loghead + paramerror)
     logfile.write(loghead + "Abnormal End\n")
     print(loghead, "Abnormal End - see .log file for error status")
@@ -599,9 +601,9 @@ kmlfile.close()
 
 # Cleanup, say goodbye and exit
 # -----------------------------
-msg = 'Flight plan(s) generated in "' + pfpname + '" and "' + kmlname + '"\n'
+msg = 'Flight plan(s) generated in "' + pfpname + '" and "' + kmloutputname + '"\n'
 print(msg)
-loghead = time.strftime("%Y.%m.%d %H:%M:%S") + " PhotoFlightPlan V1.03: "
+loghead = time.strftime("%Y.%m.%d %H:%M:%S") + " PhotoFlightPlan V1.04: "
 logfile.write(loghead + msg)
 logfile.write(loghead + "Normal  End\n")
 logfile.close()
