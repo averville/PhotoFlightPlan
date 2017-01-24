@@ -1,12 +1,13 @@
 #! /usr/bin/python3
-#############################################################
+############################################################
 # photoflightplan1.07.py by Kildir Technologies, GPL license
 # André Verville 2016.12.20 and +
 # Photographic flight plan generation for manned aircrafts
-# produces a flight plan (.pfp) data file for Collimator,
+# produces flight plan (.pfp) data files for Collimator,
 # a Raspberry Pi based flight navigation system
-# and exports a kml output to see the results in Google Earth
-#############################################################
+# and exports kml outputs to see the results in Google Earth
+# Note: output files formatted for Windows (cd/lf line ends)
+############################################################
 
 # -----------------------------------
 # Point class for computing functions
@@ -55,6 +56,7 @@ def pointinpolygon(x, y, poly):
         p1x, p1y = p2x, p2y
     return inside
 
+# ----------------------------------------------------
 # Function to end program prematurely in case of error
 # ----------------------------------------------------
 def abnormalend():
@@ -64,14 +66,14 @@ def abnormalend():
     print(msghd + "Stop - Please check log file")
     exit()
 
+# -------------------------------------------------------------------------
 # Vincenty Direct geodetic computation function (Andre Verville)
 # generates latitude, longitude and inverse bearing
 # from a given point in lat lon, bearing and distance
 # Formulas from my Bachelor Degrees thesis, Laval University, 1978
 # Credits: Thaddeus Vincenty, Survey Review, Vol.XXIII, No. 176, April 1975
 # https://www.ngs.noaa.gov/PUBS_LIB/inverse.pdf
-# ----------------------------------------------------------------------------
-
+# -------------------------------------------------------------------------
 def vincentydirect(lat1deg, lon1deg, brg12deg, dist):
     import math
     if dist < 0:  # if distance negative, we reverse bearing (can be useful)
@@ -127,13 +129,13 @@ def vincentydirect(lat1deg, lon1deg, brg12deg, dist):
         brg21deg = brg21deg % 360
     return lat2deg, lon2deg, brg21deg
 
+# -------------------------------------------------------------------------
 # Vincenty Inverse geodetic computation function (Andre Verville)
 # generates bearing and distance from two given points in lat lon
 # Formulas from my Bachelor Degrees thesis, Laval University, 1978
 # Credits: Thaddeus Vincenty, Survey Review, Vol.XXIII, No. 176, April 1975
 # https://www.ngs.noaa.gov/PUBS_LIB/inverse.pdf
-# ----------------------------------------------------------------------------
-
+# -------------------------------------------------------------------------
 def vincentyinverse(lat1deg, lon1deg, lat2deg, lon2deg):
     import math
     a, b = 6378137.0, 6356752.3141 # GRS80 ellipsoid, edit as required
@@ -179,11 +181,12 @@ def vincentyinverse(lat1deg, lon1deg, lat2deg, lon2deg):
     dist = d12 + ((d12 * d12 * d12) / (24.0 * RB * RB))
     brg12deg = math.degrees(brg12)
     brg21deg = math.degrees(brg21)
-    if brg12deg < 0.0: brg12deg = brg12deg + 360.0
-    if brg21deg < 0.0: brg21deg = brg21deg + 360.0
-    brg21deg = (brg21deg + 180.0) % 360.0
-    return brg12deg, brg21deg, dist
+    if brg12deg < 0.0: brg12deg = brg12deg + 360.0  # adjust bearing (0-360)
+    if brg21deg < 0.0: brg21deg = brg21deg + 360.0  # adjust bearing (0-360)
+    brg21deg = (brg21deg + 180.0) % 360.0  # inverse bearing at 180 degrees
+    return brg12deg, brg21deg, dist  # return 2 bearings and distance
 
+# -----------------------------------------------------------
 # Function to read parameters file data
 # gets parameters and polygon
 # but also returns end of file status if no more data to read
@@ -234,9 +237,10 @@ def readparams():
         # Case where we have Area of Interest (AOI) polygon points to read
         # within the parameters file itself, storing them to list named polygon
         # ---------------------------------------------------------------------
-        if "polygon =" in paramdata and aoikml == "none":
-            poly = extractlist(paramdata.split('"')[1], " ")
-            polygon = polygon + [poly[1], poly[2]]  # add lat/lon to list
+        if "polygon =" in paramdata:
+            if aoikml == "none":
+                poly = extractlist(paramdata.split('"')[1], " ")
+                polygon = polygon + [poly[1], poly[2]]  # add lat/lon to list
         continue
 
 # ========================================
@@ -255,9 +259,9 @@ logfile = open("photoflightplan.log", "a")
 loghead = time.strftime("%Y.%m.%d %H:%M:%S") + " PhotoFlightPlan V1.07: "
 logfile.write(loghead + "Startup\r\n")
 
-# Reading provided arguments from the command line
-# Defaulting to "flightplan" if no file name provided
-# ---------------------------------------------------
+# Reading optional argument from the command line
+# Defaulting to "photoflightplan" if no parameters file name provided
+# -------------------------------------------------------------------
 args, nbargs = sys.argv, len(sys.argv)
 for index in range(1, nbargs, 1):
     if ".par" in sys.argv[index]: parname = sys.argv[index]
@@ -500,7 +504,6 @@ while readparams():  # process if this is a dataset
 
     # Move along the lines to find where we enter and exit the polygon
     # ---------------------------------------------------------------
-    isaflightline = False # beginning status
     flightlines = []
     linelength = 0
 
@@ -617,6 +620,7 @@ while readparams():  # process if this is a dataset
     # Generate the kml file for Google Earth
     # First, we put the kml header and style data
     # warning: erases any previous kml file without notice
+    # ----------------------------------------------------
     kmlfile = open(kmloutputname, "w")
     kmlfile.write('<?xml version="1.0" encoding="UTF-8"?>\r\n')
     kmlfile.write('<kml xmlns="http://www.opengis.net/kml/2.2"')
@@ -715,7 +719,7 @@ while readparams():  # process if this is a dataset
     logfile.write(" PhotoFlightPlan V1.07: ")
     logfile.write("Produced Google kml in " + kmloutputname + "\r\n")
 
-    # While loop ending statements
+    # While loop end
     # go read another block as long as the readparams() function returns True
     # get out of the loop when readparams() returns False
     # -----------------------------------------------------------------------
